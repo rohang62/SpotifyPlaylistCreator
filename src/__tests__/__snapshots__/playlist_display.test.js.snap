@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders error screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="spotify_logo.svg"
+    />
+    <div
+      className="Incorrect"
+    >
+      
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+       Go back to Login 
+    </button>
+  </header>
+</div>
+`;
+
+exports[`renders loading screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="spotify_logo.svg"
+    />
+    Loading...
+  </header>
+</div>
+`;
+
+exports[`renders success screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="spotify_logo.svg"
+    />
+    <div
+      className="Incorrect"
+    >
+      
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+       Go back to Login 
+    </button>
+  </header>
+</div>
+`;

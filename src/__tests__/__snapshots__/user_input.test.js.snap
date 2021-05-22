@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders user input screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="spotify_logo.svg"
+    />
+    <div>
+      <label>
+        Name of Playlist to create:
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        Length of Playlist:
+        <input
+          max="600"
+          min="10"
+          onChange={[Function]}
+          type="range"
+          value={100}
+        />
+        100
+         
+        minutes
+      </label>
+    </div>
+    <div>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+         Go back to Login 
+      </button>
+      <div
+        className="divider"
+      />
+      <button
+        className="button"
+        disabled={true}
+        onClick={[Function]}
+      >
+         
+        Create Playlist
+      </button>
+    </div>
+  </header>
+</div>
+`;

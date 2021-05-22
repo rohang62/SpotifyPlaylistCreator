@@ -1,0 +1,87 @@
+import React from 'react';
+import logo from './spotify_logo.svg';
+import './App.css';
+import { username, password } from './login_details';
+import LoginScreen from './login_screen';
+import UserInput from './user_input';
+
+export default class IncorrectLogin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: props.state.username,
+      password: props.state.password,
+      logged: 1,
+    };
+    this.changeUsername = this.changeUsername.bind(this);
+    this.changePassword = this.changePassword.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  changeUsername(event) {
+    this.setState({ username: event.target.value });
+  }
+
+  changePassword(event) {
+    this.setState({ password: event.target.value });
+  }
+
+  handleSubmit() {
+    if (username === this.state.username && password === this.state.password) {
+      this.setState({ logged: 2 });
+      window.open(
+        'http://localhost:8000/authenticate', '_blank',
+      );
+    } else {
+      this.setState({ logged: 1 });
+    }
+  }
+
+  render() {
+    if (this.state.logged === 0) {
+      return (
+        <div className="App">
+          <LoginScreen state={this.state} />
+        </div>
+      );
+    } if (this.state.logged === 1) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <div>
+              <label>
+                Username:
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.changeUsername}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Password:
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.changePassword}
+                />
+              </label>
+            </div>
+            <br />
+            <div className="Incorrect">
+              Incorrect details. Please try again.
+            </div>
+            <button className="button" onClick={this.handleSubmit}> Submit </button>
+          </header>
+        </div>
+      );
+    }
+    return (
+      <div className="App">
+        <UserInput state={this.state} />
+      </div>
+    );
+  }
+}

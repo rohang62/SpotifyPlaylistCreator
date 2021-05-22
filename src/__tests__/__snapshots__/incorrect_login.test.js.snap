@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders incorrect login screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="spotify_logo.svg"
+    />
+    <div>
+      <label>
+        Username:
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        Password:
+        <input
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+      </label>
+    </div>
+    <br />
+    <div
+      className="Incorrect"
+    >
+      Incorrect details. Please try again.
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+       Submit 
+    </button>
+  </header>
+</div>
+`;
